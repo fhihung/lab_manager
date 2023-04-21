@@ -1,4 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:lab_manager/constant.dart';
 import 'package:lab_manager/screens/forgot/forgot_screen.dart';
@@ -13,9 +14,14 @@ import 'package:lab_manager/screens/login/component/rounded_password_field.dart'
 import 'package:lab_manager/screens/sign_up/sign_up_screen.dart';
 import 'package:lab_manager/screens/welcome/component/rounded_button.dart';
 
-class Body extends StatelessWidget {
+class Body extends StatefulWidget {
   const Body({super.key});
 
+  @override
+  State<Body> createState() => _BodyState();
+}
+
+class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
